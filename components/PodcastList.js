@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { Link } from "../routes";
+import slug from "../helpers/slug";
 
 export default class PodcastList extends React.Component {
   render() {
@@ -7,7 +8,17 @@ export default class PodcastList extends React.Component {
     return (
       <div>
         {podcasts.map(clip => (
-          <Link href={`/podcast?id=${clip.id}`} prefetch key={clip.id}>
+          <Link
+            route="podcast"
+            params={{
+              slugChannel: slug(clip.channel.title),
+              idChannel: clip.channel.id,
+              slug: slug(clip.title),
+              id: clip.id
+            }}
+            prefetch
+            key={clip.id}
+          >
             <a className="podcast">
               <h3>{clip.title}</h3>
               <div className="meta">
