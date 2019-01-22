@@ -1,7 +1,5 @@
 import { Link } from "../routes";
 import slug from "../helpers/slug";
-import Error from "next/error";
-import Layout from "../components/Layout";
 
 export default class PodcastPlayer extends React.Component {
   render() {
