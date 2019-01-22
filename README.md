@@ -2,6 +2,8 @@
 
 Podcast app using AudioBoom API in order to learn NextJS.
 
+[See the app](https://podcasts-bunayqdsfn.now.sh)
+
 ## How use it
 
 Node.JS 10 required
